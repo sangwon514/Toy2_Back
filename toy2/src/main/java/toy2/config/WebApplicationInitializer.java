@@ -9,7 +9,7 @@ public class WebApplicationInitializer extends AbstractAnnotationConfigDispatche
 	 @Override
 	    protected Class<?>[] getRootConfigClasses() {
 	        return new Class<?>[]{toy2.config.ApplicationConfig.class,
-	        	toy2.config.security.SecurityConfig.class};
+	        	toy2.config.SecurityConfig.class};
 	    }
 
 	    // Spring MVC 설정 파일 클래스를 지정한다.
