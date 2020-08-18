@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 public class CustomUserDetails implements UserDetails {
 	
 	private Long userId;
-    private String userName;
+    private String nickname;
     private String password;
     private int quiz_create;
     private List<GrantedAuthority> role= new ArrayList<GrantedAuthority>();
@@ -31,15 +31,18 @@ public class CustomUserDetails implements UserDetails {
 	
 
 	@Override
-    public String getUsername() {
-        return userName;
-    }
-
-    public void setUsername(String userName) {
-        this.userName = userName;
-    }
-
-    @Override
+	public String getUsername() {
+		// TODO Auto-generated method stub
+		return nickname;
+	}
+	
+    public String getNickname() {
+		return nickname;
+	}
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+	@Override
     public String getPassword() {
         return password;
     }

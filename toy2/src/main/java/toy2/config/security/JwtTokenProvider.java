@@ -1,6 +1,7 @@
 package toy2.config.security;
 
 import java.util.Base64;
+import java.util.Date;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +14,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
@@ -33,6 +35,7 @@ public class JwtTokenProvider {
 		Claims claims = Jwts.claims().setSubject(userId);
 		return Jwts.builder()
 				.setClaims(claims)
+				.setIssuedAt(new Date())
 				.signWith(SignatureAlgorithm.HS256, secretKey)
 				.compact();
 	}
@@ -50,5 +53,8 @@ public class JwtTokenProvider {
 		return reqs.getHeader("X-AUTH-TOKEN");
 	}
 	
+	public boolean isValied(String token) {
+		return Jwts.parser().isSigned(token);
+	}
 	
 }
