@@ -2,9 +2,11 @@ package toy2.service;
 
 import java.util.List;
 
-import kr.or.connect.reservation.service.security.UserDbService;
-import kr.or.connect.reservation.service.security.UserEntity;
-import kr.or.connect.reservation.service.security.UserRoleEntity;
+import toy2.service.security.UserDbService;
+import toy2.service.security.UserEntity;
+import toy2.service.security.UserRoleEntity;
+
+
 
 public interface MemberService extends UserDbService {
 	public UserEntity getUser(String loginUserId);
