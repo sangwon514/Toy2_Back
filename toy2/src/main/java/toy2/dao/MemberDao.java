@@ -4,10 +4,13 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
-import kr.or.connect.reservation.dao.sqls.MemberDaoSqls;
-import kr.or.connect.reservation.dto.Member;
+
+import toy2.dao.sql.MemberDaoSqls;
+import toy2.dto.Member;
 
 import javax.sql.DataSource;
+
+
 import java.util.HashMap;
 import java.util.Map;
 

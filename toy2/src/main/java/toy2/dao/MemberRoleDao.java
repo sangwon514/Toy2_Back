@@ -8,8 +8,8 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
-import kr.or.connect.reservation.dao.sqls.MemberRoleDaoSqls;
-import kr.or.connect.reservation.dto.MemberRole;
+import toy2.dao.sql.MemberRoleDaoSqls;
+import toy2.dto.MemberRole;
 
 import javax.sql.DataSource;
 import java.util.HashMap;
