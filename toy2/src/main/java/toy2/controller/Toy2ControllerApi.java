@@ -1,5 +1,6 @@
 package toy2.controller;
 
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +25,7 @@ import toy2.service.security.CustomUserDetails;
 
 @RestController
 @RequestMapping(path="/quizzes")
+
 public class Toy2ControllerApi {
 	@Autowired
 	private QuizService quizService;
