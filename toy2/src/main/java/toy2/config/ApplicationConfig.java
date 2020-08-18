@@ -8,5 +8,6 @@ import org.springframework.context.annotation.Import;
 @ComponentScan(basePackages = {"toy2.dao", "toy2.service"})
 @Import({DBConfig.class})
 public class ApplicationConfig {
+//Test
 
 }
