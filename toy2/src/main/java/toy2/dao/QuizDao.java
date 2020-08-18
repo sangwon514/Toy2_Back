@@ -1,7 +1,5 @@
 package toy2.dao;
 
-
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -38,4 +36,19 @@ public class QuizDao {
     	
     	return jdbc.query(QuizSqls.SELECT_QUIZZES, Collections.<String, Object>emptyMap(), rowMapper);
     }
+    
+    public List<QuizDto> getUserQuizzes(String nickname) {
+    	try {
+    		Map<String, String> params = new HashMap<>();
+    		
+    		params.put("nickname", nickname);
+    		
+			
+			return jdbc.query(QuizSqls.SELECT_USER_QUIZZES, params, rowMapper);
+			
+		}catch(EmptyResultDataAccessException e) {//해당 조건이 없을경우
+			return null;
+		}
+    }
+    
 }

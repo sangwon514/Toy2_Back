@@ -12,11 +12,11 @@ import toy2.service.MemberService;
 
 @Controller
 @RequestMapping(path = "/members")
-public class MemberController {
+public class UserController {
     // 스프링 컨테이너가 생성자를 통해 자동으로 주입한다.
     private final MemberService memberService;
 
-    public MemberController(MemberService memberService){
+    public UserController(MemberService memberService){
         this.memberService = memberService;
     }
 
