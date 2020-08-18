@@ -5,15 +5,18 @@ import java.util.List;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 
 import toy2.dao.QuizDao;
+import toy2.dao.UserQuizDao;
 import toy2.dto.QuizDto;
+import toy2.dto.UserQuizDto;
 import toy2.service.QuizService;
 
 public class QuizServiceImpl implements QuizService{
 	@Autowired
 	private QuizDao quizDao;
+	@Autowired
+	private UserQuizDao userQuizDao;
 	
 	
 	
@@ -32,6 +35,26 @@ public class QuizServiceImpl implements QuizService{
 		for(int i=0; i<5;i++) {
 			list.add(quizzes.get(randNum));
 		}
+		
+		return list;
+	}
+
+
+
+	@Override
+	public int insertUserQuiz(UserQuizDto userQuiz) {
+		int success=userQuizDao.insertUserQuiz(userQuiz);
+		
+		return success;
+		
+	}
+
+
+
+	@Override
+	public List<QuizDto> getUserQuizzes(String nickname) {
+		// TODO Auto-generated method stub
+		List<QuizDto> list = quizDao.getUserQuizzes(nickname);
 		
 		return list;
 	}
