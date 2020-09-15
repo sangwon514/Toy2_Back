@@ -1,0 +1,4 @@
+git remote rm origin :remote 삭제방법
+git push -f origin my-feature :코드 변경 이력 덮어쓰기
+git branch --list : 레퍼지토리에 연결된 모든 branch 확인
+git checkout 브랜치명 : 해당 브랜치로 switch
