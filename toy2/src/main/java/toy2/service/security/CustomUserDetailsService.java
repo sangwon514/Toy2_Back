@@ -25,6 +25,9 @@ public class CustomUserDetailsService implements UserDetailsService {
         // loginId에 해당하는 정보를 데이터베이스에서 읽어 CustomUser객체에 저장한다.
         // 해당 정보를 CustomUserDetails객체에 저장한다.
         CustomUserDetails customUser = userdao.findByNickName(loginUserId);
+        if(customUser == null) {
+        	 throw new UsernameNotFoundException(loginUserId);
+        }
         
         return customUser;
     }
