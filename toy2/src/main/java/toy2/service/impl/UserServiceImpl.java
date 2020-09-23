@@ -26,6 +26,7 @@ public class UserServiceImpl implements UserService{
 	private UserDao userdao;
 	@Autowired
 	private UserRankDao userrankdao;
+	//test
 	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
