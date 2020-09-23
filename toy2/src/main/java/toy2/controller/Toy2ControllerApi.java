@@ -1,6 +1,5 @@
 package toy2.controller;
 
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +24,6 @@ import toy2.service.security.CustomUserDetails;
 
 @RestController
 @RequestMapping(path="/quizzes")
-
 public class Toy2ControllerApi {
 	@Autowired
 	private QuizService quizService;
@@ -59,7 +57,7 @@ public class Toy2ControllerApi {
 		
 	}
 	
-	//유저가 만든 퀴즈 등
+	//유저가 만든 퀴즈 등록
 	@PostMapping
 	public void insertUserQuiz(@RequestBody Map<String, Object> requestParam, @AuthenticationPrincipal CustomUserDetails user) {
 		
@@ -81,15 +79,6 @@ public class Toy2ControllerApi {
 		
 		
 	}
-	@PostMapping
-	public Map<String,Object> check(@RequestBody Map<String, Object> requestParam, HttpServletResponse response){
-		if() {
-			response.
-		}
-		
-		
-		return null;
-	}
-	
+
 
 }
