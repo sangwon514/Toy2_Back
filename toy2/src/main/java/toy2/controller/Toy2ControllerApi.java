@@ -79,20 +79,6 @@ public class Toy2ControllerApi {
 		
 		
 	}
-//	@PostMapping
-//	public Map<String,Object> check(@RequestBody Map<String, Object> requestParam, 
-//			@AuthenticationPrincipal CustomUserDetails user,
-//			HttpServletResponse response){
-//		Long userId=user.getUserId();
-//		
-//		
-////		if() {
-////			response.setStatus(400);
-////		}
-//		
-//		
-//		return null;
-//	}
-	
+
 
 }

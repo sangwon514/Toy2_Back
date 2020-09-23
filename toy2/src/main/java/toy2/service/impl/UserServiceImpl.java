@@ -1,7 +1,7 @@
 package toy2.service.impl;
 
 import java.util.HashMap;
-
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 
 import toy2.config.security.JwtTokenProvider;
 import toy2.dao.UserDao;
+import toy2.dao.UserRankDao;
+import toy2.dto.UserRankDto;
 import toy2.service.UserService;
 import toy2.service.security.CustomUserDetails;
 
@@ -22,7 +24,8 @@ import toy2.service.security.CustomUserDetails;
 public class UserServiceImpl implements UserService{
 	@Autowired
 	private UserDao userdao;
-	
+	@Autowired
+	private UserRankDao userrankdao;
 	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
@@ -80,8 +83,14 @@ public class UserServiceImpl implements UserService{
 		
 		return map;
 	}
-	
 
+	@Override
+	public List<UserRankDto> searchUserRank(Long userId) {
+		
+		return userrankdao.searchRank(userId);
+	}
+	
+	
 	
 	
 }

@@ -41,21 +41,5 @@ public class LoginController {
 
 	}
 	
-//	
-//	@PostMapping("/users") //nickname 중복검사
-//	public Map<String,String> checkNickName(@RequestBody Map<String, String> json){
-//		String nickname = json.get("nickname");
-//		Map<String, String> map = userService.checkNickName(nickname);
-//	
-//		return map;
-//	}
-//	
-//	@PostMapping("/users/signup") //회원가입
-//	public Map<String,String> signUp(@RequestBody Map<String, String> json){
-//		String nickname = json.get("nickname");
-//		String password = json.get("password");
-//		Map<String, String> map = userService.signUp(nickname, password);
-//	
-//		return map;
-//	}
+
 }
